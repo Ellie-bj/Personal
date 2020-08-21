@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Ferdighet 4</title>
+    <link href="Ferdighet4.css" rel="stylesheet"/>
+</head>
+<body>
+    <h1>
+        Oppg 4 - Kode thingy...
+    </h1>
+    <p>
+        Ferdighet 4 -  Variabel utenfor funksjon og innenfor funksjon,
+        samt sette sammen tekst av flere deler,
+        lagre tekst og tall i variabel
+    </p>
+    
+    <div id="output"></div>
+
+    <button onclick="minFunksjon(this)">0</button>
+    <button onclick="minFunksjon(this)">1</button>
+    <button onclick="minFunksjon(this)">2</button>
+    <button onclick="minFunksjon(this)">3</button>
+    <button onclick="minFunksjon(this)">4</button>
+    <button onclick="minFunksjon(this)">5</button>
+    <button onclick="minFunksjon(this)">6</button>
+    <button onclick="minFunksjon(this)">7</button>
+    <button onclick="minFunksjon(this)">8</button>
+    <button onclick="minFunksjon(this)">9</button>
+
+    <script>
+        // (tall) er en parameter = functionName(parameter1, parameter2, parameter3) { code to be executed} //
+        // ('output') er id'n for en div som viser til hvor funksjonen skal trå i kraft //
+
+        function minFunksjon(tall) {
+            document.getElementById('output').innerHTML += tall.innerHTML
+        }
+        // kall document sin getElementById funksjon og send in 'output' som en parameter sin innerHTML//
+        // du kan altså lese punktum som "Sin"//
+    </script>
+
+
+</body>
+</html>
