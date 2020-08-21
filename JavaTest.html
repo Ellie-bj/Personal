@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="JavaTest.css" rel="stylesheet"
+    <meta charset="utf-8" />
+    <title>JavascriptTest</title>
+</head>
+<body>
+    <h1>Hva skjer hvis man heller vann på bilen ?</h1>
+        <p id="noe"></p>
+    <div>
+        <button onclick="S1()">Den blir våt?</button>
+        <button onclick="S2()">Den forsvinner?</button>
+        <button onclick="S3()">Naboen blir sur?</button>
+    </div>
+        <script>
+            function S1() {
+                document.getElementById('noe').innerHTML = 'RIKTIG!';
+            }
+            function S2() {
+                document.getElementById('noe').innerHTML = 'FEIL! Det skulle jeg likt å see!';
+            } 
+            function S3() {
+                document.getElementById('noe').innerHTML = 'FEIL! Det er jo ikke hans bil ?';
+            }
+        </script>
+</body>
+</html>
