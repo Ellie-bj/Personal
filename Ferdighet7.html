@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Ferdighet 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--
+    Oppgave 3
+    Lag en slider for å velge bredde fra 1 til 1000 og en slider for å velge høyde fra 1 til 1000.
+    Vis en div med valgt bredde og høyde - og legg inn tekst i diven som viser arealet (bredde*høyde) og omkretsen (2*bredde+2*høyde).
+    -->
+    <h2>Ferdighet 7 - Sette variabel til resultat av et regnestykke. </h2>
+
+    <div> Bredde --><input id="Bredde" type="range" min="1" max="1000" step="1" oninput="calculate(), doSomething()" value="1" /></div>
+    <div>Høyde --><input id="Høyde" type="range" min="1" max="1000" step="1" oninput="calculate(), doSomething()" value="1" /></div>
+
+    <div id="resultat"></div>
+    <hr />
+    <div id="valgt"></div>
+    <hr />
+    <div id="areal"></div>
+    <hr />
+    <div id="omkrets"></div>
+
+
+
+    <script>
+
+        var tallAInput = document.getElementById('Bredde');
+        var tallBInput = document.getElementById('Høyde');
+        var valgtDiv = document.getElementById('valgt');
+        var arealDiv = document.getElementById('areal');
+        var omkretsDiv = document.getElementById('omkrets');
+
+
+        calculate();
+
+        function calculate() {
+            var tallA = parseInt(tallAInput.value);
+            var tallB = parseInt(tallBInput.value);
+            var sum = tallA + tallB;
+            var differense = tallA - tallB;
+            var produkt = tallA * tallB;
+            var kvotient = tallA / tallB;
+        }
+        doSomething();
+        function doSomething() {
+            var tallA = parseInt(tallAInput.value);
+            var tallB = parseInt(tallBInput.value);
+            var produkt = tallA * tallB;
+            var ganger = 2 * tallA + 2 * tallB;
+
+
+            valgtDiv.innerHTML = '' + 'Bredde ' + tallA + ' ' + 'Høyde' + tallB;
+            //Areal = (bredde * Høyde)
+            arealDiv.innerHTML = 'Areal' + '(' + tallA + '*' + tallB + ')' + '=' + produkt;
+            // omkrets = (2*bredde+2*høyde).
+            omkretsDiv.innerHTML = '' + 'Omkrets ' + ' (' + 2 + '*' + tallA + ' + ' + 2 + ' * ' + tallB + ')' + ' = ' + ganger;
+        }
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+

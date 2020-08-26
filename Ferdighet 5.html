@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Oppg 5</title>
+</head>
+<body onload="demo()">
+    <h1>Ferdighet 5</h1>
+
+
+    <div id="demo"></div>
+    <div id="demo2"></div>
+    <script>
+        document.getElementById('demo2').innerHTML = 'BeforeLoad:' + '' + new Date().toTimeString();
+        function demo() {
+            document.getElementById('demo').innerHTML = 'Onload:' + '' + new Date().toTimeString();
+            console.log(demo)
+        }
+
+    </script>
+
+    <img src="https://i.etsystatic.com/5117067/r/il/d20c0c/1090810115/il_794xN.1090810115_adar.jpg" />
+</body>
+</html>
