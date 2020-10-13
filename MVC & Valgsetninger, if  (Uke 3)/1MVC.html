@@ -22,7 +22,7 @@
         var points = 0;
         var pointsPerClick = 1;
         var smileyIndex = 0;
-        var ifCheat = 'false';
+        var ifCheat = '';
 
         // controller
         function doClick() {
@@ -40,10 +40,7 @@
         function useCheat() {
             pointsPerClick += 10;
             points *= 10;
-            ifCheat += 'true';
-            if (ifCheat = true) {
-                alert("did... did you just !?")
-            }
+            ifCheat = 'CHEATER!!!!!!!!';
             updateView();
         }
         console.log(useCheat);
@@ -58,7 +55,9 @@
                     <div id="pointsInfo">${points}</div>
                     <button onclick="buyUpgrade()">Kjøp oppgradering (10 poeng)</button>
                     <Button onclick="useCheat()"><del>Cheat!</del></button>
+                    ${ifCheat}
                 `;
+
         }
     </script>
 </body>

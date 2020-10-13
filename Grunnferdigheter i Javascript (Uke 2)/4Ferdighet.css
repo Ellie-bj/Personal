@@ -1,0 +1,18 @@
+﻿body{
+    color:blue;
+    background-color:aquamarine;
+    text-align:center;
+}
+
+div{
+    width: 344px;
+    background-color:lightblue;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    align-content:center;
+    font-family: helvetica;
+    font-size: 200%;
+    border: #bbbbaa solid 4px;
+    border-radius: 10px;
+}
