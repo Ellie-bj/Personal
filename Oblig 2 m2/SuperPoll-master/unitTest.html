@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Test Suite</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.10.1.css">
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.10.1.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/createPollPageView.js"></script>
+    <script src="js/createPollPageController.js"></script>
+    <script src="js/votePageView.js"></script>
+    <script src="js/votePageController.js"></script>
+    <script src="js/pollHistoryView.js"></script>
+    <script src="js/pollHistoryController.js"></script>
+
+    <script>
+
+        function updateView() {}
+
+        // QUnit.module('createPollPage', function() {
+
+        //     QUnit.test('create poll', function(assert) {
+        //         arrange
+        //         model.inputs = {
+        //             createPoll: {
+        //                 pollId: null,
+        //                 question: 'Hvem er den tøffeste læreren ved GET Academy?',
+        //                 options: ['Geir', 'Eskil', 'Terje'],
+        //                 usersCanAddAlternatives: true,
+        //             },
+        //         };
+        //         model.polls = [];
+
+        //         act
+        //         createOrUpdatePoll();
+
+        //         assert
+        //         const expectedPollObj = {
+        //             isOpen: true,
+        //             usersCanAddAlternatives: true,
+        //             question: 'Hvem er den tøffeste læreren ved GET Academy?',
+        //             options: ['Geir', 'Eskil', 'Terje'],
+        //             votes: {},
+        //         };
+        //         assert.equal(model.polls.length, 1);
+        //         assert.deepEqual(model.polls[0], expectedPollObj);
+        //         assert.equal(model.inputs.createPoll.pollId !== null, true);
+
+        //     });
+
+        //     QUnit.test('update poll', function(assert) {
+        //         assert.equal(1, 2);
+        //     });
+        // });
+
+        QUnit.module('Checks if current page changes, and that it gets the correct pollId', function() 
+        {
+            QUnit.test('create poll', function(assert) 
+            {
+                // arrange
+                model.inputs = 
+                {
+                    createPoll: 
+                    {
+                        pollId: null,
+                        question: 'Hvem er den tøffeste læreren ved GET Academy?',
+                        options: ['Geir', 'Eskil', 'Terje'],
+                        usersCanAddAlternatives: true,
+                    },
+                };
+                model.polls = [];
+                // act
+                createOrUpdatePoll();
+                changePage('viewPolls');
+                displayVote(0);
+
+                assert.equal(model.app.currentPage, 'createPoll');
+                assert.deepEqual(model.polls[0].pollId, model.inputs.createPoll.pollId);
+            });
+        });
+    </script>
+</body>
+
+</html>
