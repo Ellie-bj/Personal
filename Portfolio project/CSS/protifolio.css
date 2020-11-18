@@ -1,0 +1,63 @@
+body{
+    background-color:grey;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    margin: 0;
+  font-family: Arial;
+}
+
+#Header{
+    text-align: center;
+    background-color: #cccccc;
+    height:100px;
+}
+#Feed{
+  height:100%;
+  text-align: center;
+}
+
+#btn {
+ text-align: center;
+}
+
+#btn button{
+  padding:10px;
+  color:black;
+  background-color: rgb(123, 161, 147);
+}
+
+
+/*-----------------Gallery--------------*/
+.Gallery{
+  margin: 10px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.Gallery img{
+  transition: 1s;
+  Padding:8px;
+  width: 150px;
+}
+
+.Gallery img:hover{
+  filter: grayscale(100%);
+  transform: scale(1.1);
+}
+
+/*------------------info--------------------*/
+
+.infoPage{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+}
+
+.infoPage img{
+  width: 50px;
+  height: 50px;
+}
+
+
